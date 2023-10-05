@@ -1,0 +1,34 @@
+1- sudo apt update && sudo apt upgrade -y
+2- apt-get install libclang-dev
+3- sudo apt install screen
+4- sudo apt install pkg-config curl git build-essential libssl-dev
+5- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+6- source $HOME/.cargo/env
+7- rustup toolchain install nightly
+8- rustup default nightly
+9- cd $HOME
+
+10- git clone --branch testnet https://github.com/massalabs/massa.git
+11- cd massa/massa-node/
+12- screen -S massa_node
+13- RUST_BACKTRACE=full cargo run --release -- -p myPaswordXXXXX|& tee logs.txt
+13- RUST_BACKTRACE=full cargo run --release -- -p 1478gg88|& tee logs.txt
+
+CTRL + A + D
+
+14- cd $HOME              *************
+15- cd massa/massa-client/  
+16- screen -S massa_client
+17- cargo run --release       my pass:  147858jjS7
+18- Exit
+
+19- screen -S massa_client
+20- cargo run -- --wallet wallet.dat
+
+21- wallet_generate_secret_key
+22- cd home
+
+23- buy_rolls ADDRESS_WALLET 1 0
+23- buy_rolls A1dvWBLpyG8x3jiFMZRLxtss2QrYwVCrSainX2RPrtAJERJbjim 1 0
+
+24- node_add_staking_secret_keys SECRET_KEY
